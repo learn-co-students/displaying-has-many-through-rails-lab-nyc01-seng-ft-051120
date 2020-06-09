@@ -1,0 +1,5 @@
+<h1><%=@doctor.name%>'s Appointments</h1>
+<%@doctor.appointments.each do |ap|%>
+<h4>Scheduled with <%=link_to ap.patient.name, patients_path(ap.patient.id)%><br>
+On <u><%=ap.appointment_datetime%></u></h3><br>
+<% end %>
